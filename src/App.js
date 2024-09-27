@@ -1,25 +1,79 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from "react";
+
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
+import blogData from "../data/blog";
+
+import Header from './Header.js'
+
+import About from './About.js'
+
+import ArticleList from "./ArticleList";
+
+import Phuket from '../assets/Phuket.jpg'
+
+import Article from "./Article";
+
+import { Navbar } from "./Navbar";
+
+import AddContent from "./AddContent";
+
+
+
+
 
 function App() {
+
+  const [articles, setArticles] = useState([]);
+
+
+
+  useEffect(() => {
+
+    fetch(" https://server-1-gaf8.onrender.com/posts ")
+
+      .then((r) => r.json())
+
+      .then((data) => {
+
+        setArticles(data);
+
+      });
+
+  }, []);
+
+
+
   return (
+
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+      <BrowserRouter>
+
+        <Navbar />
+
+        <Routes>
+
+          <Route path='/' element={<Header name="Rejuvenate" />} />
+
+          <Route path='/about' element={<About image={Phuket} about={blogData.about} />} />
+
+          <Route path='/articles' element={<Article posts={articles} />} />
+
+          <Route path='/article/:id' element={<ArticleList posts={articles} />} >
+
+          </Route>
+
+          <Route path='/add' element={<AddContent setArticles={setArticles} />} />
+
+        </Routes>
+
+      </BrowserRouter>
+
+    </div >
+
   );
+
 }
 
-export default App;
+export default App; 
