@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-import blogData from "../data/blog";
+// import blogData from "../data/blog";
 
 import Header from './Header.js'
 
@@ -10,7 +10,7 @@ import About from './About.js'
 
 import ArticleList from "./ArticleList";
 
-import Phuket from '../assets/Phuket.jpg'
+import Phuket from './Phuket.jpg'
 
 import Article from "./Article";
 
@@ -56,7 +56,7 @@ function App() {
 
           <Route path='/' element={<Header name="Rejuvenate" />} />
 
-          <Route path='/about' element={<About image={Phuket} about={blogData.about} />} />
+          <Route path='/about' element={<About image={Phuket} />} />
 
           <Route path='/articles' element={<Article posts={articles} />} />
 
