@@ -260,8 +260,6 @@ input {
 
   cursor: pointer;
 
-
-
   color: white;
 
   border-radius: 8%;
@@ -282,14 +280,17 @@ input {
 
   font-family: Montserrat, sans-serif;
 
-  font-size: 1.1em;
+  font-size: 1.3em;
 
   line-height: 22px;
 
 
-
 }
 
+.header img {
+  max-height: 450px;
+  box-shadow: 2px 2px 5px rgba(218, 214, 214, 0.3);
+}
 
 
 .about hr {

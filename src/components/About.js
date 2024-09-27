@@ -14,11 +14,11 @@ function About({ about, image = "https://via.placeholder.com/215" }) {
 
                 <br></br>
                 <h4>Why This Blog?</h4>
-                As a high school teacher who values storytelling and the craft of writing, I started this blog to create a supportive environment for writers. It’s a place where we can explore the art of writing together, learn from each other, and most importantly, grow as writers.
+                As a high school teacher who values storytelling and the craft of writing, I started this blog to create a supportive environment for writers. It's a place where we can explore the art of writing together, learn from each other, and most importantly, grow as writers.
 
                 Thank you for being here, and I hope this blog becomes a source of inspiration and knowledge for your writing journey.
 
-                Here’s to your next great story.</p>
+                Here's to your next great story.</p>
         </div>
     )
 }

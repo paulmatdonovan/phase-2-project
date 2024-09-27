@@ -10,13 +10,14 @@ import About from './About.js'
 
 import ArticleList from "./ArticleList";
 
-import Phuket from './Phuket.jpg'
+import Phuket from '../assets/Phuket.jpg'
 
 import Article from "./Article";
 
-import { Navbar } from "./Navbar";
+import { Navbar } from "./Navbar.js";
 
 import AddContent from "./AddContent";
+import './index.css'
 
 
 

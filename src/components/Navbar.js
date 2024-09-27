@@ -17,7 +17,6 @@ export const Navbar = () => {
                 <li><NavLink className="navbar-menu" to='/articles'>Articles</NavLink></li>
                 <li><NavLink className="navbar-menu" to='/add'>Create</NavLink></li>
 
-
             </ul>
         </div >
 
